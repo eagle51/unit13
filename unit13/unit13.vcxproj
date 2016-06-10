@@ -110,7 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="源.cpp" />
+    <ClCompile Include="test13_13.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myHasPtr.h" />
