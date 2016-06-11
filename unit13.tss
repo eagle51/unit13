@@ -4,5 +4,8 @@
     <ArrayOfString>
       <string>D:\C++primertest\unit13\unit13\test13_13.cpp</string>
     </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\C++primertest\unit13\unit13\myHasPtr.h</string>
+    </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
