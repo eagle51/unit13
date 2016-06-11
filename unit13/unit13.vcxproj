@@ -110,10 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test13_13.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myHasPtr.h" />
+    <ClCompile Include="test13_17.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
