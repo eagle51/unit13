@@ -38,4 +38,5 @@ std::string &HasPtr::operator*()
 {
 	return *ps;
 }
+
 #endif
