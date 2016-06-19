@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test13_28.cpp" />
+    <ClCompile Include=".cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myBinStrTree.h" />
+    <ClInclude Include="myMessage.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6C7FBAE8-4CB4-4E95-86D8-20D62690DE96}</ProjectGuid>

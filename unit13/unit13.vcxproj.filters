@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test13_28.cpp">
+    <ClCompile Include=".cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myBinStrTree.h">
+    <ClInclude Include="myMessage.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

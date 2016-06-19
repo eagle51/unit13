@@ -1,15 +1,18 @@
-#ifndef MYHASPTR_H
+ï»¿#ifndef MYHASPTR_H
 #define MYHASPTR_H
 #include <string>
+#include <iostream>
 class HasPtr {
+	friend void swap(HasPtr &lhs, HasPtr &rhs);
 public:
 	HasPtr(const std::string &s = std::string()) :
 		ps(new std::string(s)),i(0) {}
 	HasPtr(const HasPtr &hp);
-	HasPtr &HasPtr::operator =(const HasPtr &);
-	HasPtr &HasPtr::operator=(const std::string &);
-	std::string &HasPtr::operator*();
-	~HasPtr() { delete ps; }	//´Ë´¦ĞèÌí¼Ódelete psÒòÎªpsµÄÄ¬ÈÏ³õÊ¼»¯Ê±¶¯Ì¬·ÖÅäÄÚ´æ£¬¶øpsÊÇÄÚÖÃÖ¸ÕëÀàĞÍ
+	HasPtr &operator =(const HasPtr &);
+	HasPtr &operator=(const std::string &);
+	std::string &operator*();
+	bool operator<(const HasPtr &) const;
+	~HasPtr() { delete ps; }	//æ­¤å¤„éœ€æ·»åŠ delete pså› ä¸ºpsçš„é»˜è®¤åˆå§‹åŒ–æ—¶åŠ¨æ€åˆ†é…å†…å­˜ï¼Œè€Œpsæ˜¯å†…ç½®æŒ‡é’ˆç±»å‹
 private:
 	std::string *ps;
 	int i;
@@ -23,7 +26,7 @@ HasPtr::HasPtr(const HasPtr &hp)
 
 HasPtr &HasPtr::operator=(const HasPtr &rhs)
 {
-	auto newp = new std::string(*rhs.ps);	//ÏÈ±£´æÒ»·İ¿½±´ÊÇÎªÁË´¦Àí×Ô¸³ÖµµÄÇé¿ö
+	auto newp = new std::string(*rhs.ps);	//å…ˆä¿å­˜ä¸€ä»½æ‹·è´æ˜¯ä¸ºäº†å¤„ç†è‡ªèµ‹å€¼çš„æƒ…å†µ
 	delete ps;
 	ps = newp;
 	i = rhs.i;
@@ -39,4 +42,17 @@ std::string &HasPtr::operator*()
 	return *ps;
 }
 
+inline void swap(HasPtr &lhs, HasPtr &rhs)
+{
+	using std::swap;
+	using std::cout;
+	using std::endl;
+	cout << "äº¤æ¢ " << *lhs.ps << "å’Œ" << *rhs.ps << endl;
+	swap(lhs.ps, rhs.ps);
+	swap(lhs.i, rhs.i);
+}
+bool HasPtr::operator<(const HasPtr &rhs) const
+{
+	return *ps < *rhs.ps;
+}
 #endif

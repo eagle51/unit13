@@ -10,6 +10,7 @@ int main()
 	h2 = "hi dad!";
 	h3 = "hi son!";
 
+	//swap(h2, h3);
 	cout << "h: " << *h << endl;
 	cout << "h2: " << *h2 << endl;
 	cout << "h3: " << *h3 << endl;
