@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include=".cpp" />
+    <ClCompile Include="String.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myMessage.h" />
+    <ClInclude Include="String.h" />
+    <ClInclude Include="StrVec.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6C7FBAE8-4CB4-4E95-86D8-20D62690DE96}</ProjectGuid>

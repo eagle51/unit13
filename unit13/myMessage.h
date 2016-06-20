@@ -16,6 +16,7 @@ public:
 	void save(Folder &);
 	void remove(Folder &);
 	void addFldr(Folder *f) { folders.insert(f); }
+	void remFldr(Folder *f) { folders.erase(f); }
 private:
 	std::string contents;		//实际消息文本
 	std::set<Folder*> folders;	//包含本Message的Folder
